@@ -1,5 +1,5 @@
-#ifndef FISIER_H_INCLUDED
-#define FISIER_H_INCLUDED
+#ifndef FUNCTII_H_INCLUDED
+#define FUNCTII_H_INCLUDED
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -170,4 +170,6 @@ int contorCif(int n , int c)
     }
     return nr;
 }
-#endif // FISIER_H_INCLUDED
+
+
+#endif // FUNCTII_H_INCLUDED

@@ -1,10 +1,10 @@
 #ifndef SOLUTII_H_INCLUDED
 #define SOLUTII_H_INCLUDED
-#include  "fisier.h"
+#include  "functii.h"
 
 void solutie1()
 {
-    int v[100],n;
+    int v[300],n;
     citireVector(v,n);
     int mn=valMin(v,n);
     int nr=nrAp(v,n,mn);
@@ -16,7 +16,7 @@ void solutie1()
 
 void solutie12()
 {
-    int v[100], f[10000], n ;
+    int v[300], f[10000], n ;
     citireVector(v,n);
     frecventaNumarVector(v,n,f);
     int mn = valMinima(f);
@@ -26,7 +26,7 @@ void solutie12()
 
 void solutie2()
 {
-    int v[100],f[10]{},n;
+    int v[300],f[10]{},n;
     citireVector(v,n);
     int cifMax=cifMaxVector(v,n);
     int pozMa=pozMax(v,n);

@@ -2,10 +2,14 @@
 1784124294 source:c:\mycode\initiere\recapitulare-vacanta\main.cpp
 	"solutii.h"
 
-1784124417 c:\mycode\initiere\recapitulare-vacanta\solutii.h
-	"fisier.h"
+1784124889 c:\mycode\initiere\recapitulare-vacanta\solutii.h
+	"functii.h"
 
 1784124294 c:\mycode\initiere\recapitulare-vacanta\fisier.h
+	<iostream>
+	<fstream>
+
+1784124889 c:\mycode\initiere\recapitulare-vacanta\functii.h
 	<iostream>
 	<fstream>
 
