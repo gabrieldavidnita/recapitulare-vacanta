@@ -27,8 +27,49 @@ void afisareVector(int v[], int dim)
 int valMin(int v[], int n)
 {
     int mn=v[0];
-    for(int i = 1 ; i<n; i++)
+    for(int i=1 ; i<n; i++)
     {
+       if(v[i]<mn)
+       {
+           mn=v[i];
+       }
+    }
+    return mn;
 }
+
+int nrAp(int v[], int n , int mn)
+{
+    int nr=0;
+    for(int  i=0; i<n; i++)
+    {
+        if(v[i]==mn)
+        {
+            nr++;
+        }
+    }
+    return nr;
+}
+
+void frecventa(int v[], int n , int f[])
+{
+    for(int i = 0 ; i <9999; i++)
+    {
+        f[i]=0;
+    }
+    for(int i = 0 ; i < n ; i++)
+    {
+        f[v[i]]++;
+    }
+}
+
+int valMinima(int f[])
+{
+    for(int i=0; i<=9999 ; i++)
+    {
+        if(f[i]!=0)
+        {
+            return i;
+        }
+    }
 }
 #endif // FISIER_H_INCLUDED
