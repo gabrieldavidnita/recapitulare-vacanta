@@ -2,5 +2,8 @@
 #include "solutii.h"
 int main()
 {
-    solutie12();
+
+
+    solutie2();
+
 }
