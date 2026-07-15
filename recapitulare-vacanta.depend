@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1784119065 source:c:\mycode\initiere\recapitulare-vacanta\main.cpp
+	<iostream>
+	"solutii.h"
+
+1784119065 c:\mycode\initiere\recapitulare-vacanta\solutii.h
+	"fisier.h"
+
+1784119098 c:\mycode\initiere\recapitulare-vacanta\fisier.h
+	<iostream>
+	<fstream>
+

@@ -1,9 +1,10 @@
 #include <iostream>
 
 using namespace std;
-
+#include "solutii.h"
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    int v[100], n;
+    citireVector(v,n);
+    afisareVector(v,n);
 }
