@@ -41,9 +41,19 @@ void solutie2()
     v[pozMi]=0;
     frecventaCifraVector(v,n,f);
     cout<<cifMax<<" apare de "<<f[cifMax]<<" ori"<<endl;
+}
 
 
-
-
+void solutie3()
+{
+    int v[300],n;
+    citireVector(v,n);
+    int mn=valMin(v,n);
+    int pmin=pozMin(v,n);
+    int pmax=pozMax(v,n);
+    cout<<" Minimul este " <<mn<<endl;
+    cout<<"Pozitia minimului este "<<pmin+1<<endl;
+    cout<<"Pozitia maximului este "<<pmax+1<<endl;
+    cout<<" Frecventa minimului intre cele doua pozitii este "<<frecventaMinimului(v,pmin,pmax,mn);
 }
 #endif // SOLUTII_H_INCLUDED

@@ -172,4 +172,24 @@ int contorCif(int n , int c)
 }
 
 
+int frecventaMinimului(int v[], int pmin, int pmax, int mn)
+{
+    if(pmin>pmax)
+    {
+        int aux=pmin;
+        pmin=pmax;
+        pmax=aux;
+
+    }
+    int nr=0;
+    for(int i=pmin; i<=pmax;i++)
+    {
+        if(v[i]==mn)
+        {
+            nr++;
+        }
+    }
+    return nr;
+}
+
 #endif // FUNCTII_H_INCLUDED
