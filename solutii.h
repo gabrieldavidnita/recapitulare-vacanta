@@ -56,4 +56,27 @@ void solutie3()
     cout<<"Pozitia maximului este "<<pmax+1<<endl;
     cout<<" Frecventa minimului intre cele doua pozitii este "<<frecventaMinimului(v,pmin,pmax,mn);
 }
+
+
+void solutie4()
+{
+    int v[300],n;
+    citireVector(v,n);
+    int cmin=cifMinVector(v,n);
+    int cmax=cifMaxVector(v,n);
+    int ok=1;
+    for(int i=0; i<n ;i++)
+    {
+        if(inCif(v[i],cmin)==0 && inCif(v[i],cmax)==0)
+        {
+            ok=0;
+        }
+    }
+    if(ok==1)
+    {
+        cout<<"Toate elementele contin cifra minima sau maxima";
+    }else{
+        cout<<"Nu toate elementele contin cifra minima sau maxima";
+    }
+}
 #endif // SOLUTII_H_INCLUDED

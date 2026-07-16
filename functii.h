@@ -98,7 +98,33 @@ void frecventaCifraVector(int v[], int n, int f[])
              }
      }
 }
+int cifMinNumar(int n )
+{
+    int mini=9;
+    while(n!=0)
+    {
+        int uc=n%10;
+        if(uc<mini)
+        {
+            mini=uc;
+        }
+        n=n/10;
+    }
+    return mini;
+}
 
+int cifMinVector(int v[], int n )
+{
+    int cifmin=cifMinNumar(v[0]);
+    for(int i=1;i<n; i++)
+    {
+        if(cifMinNumar(v[i])<cifmin)
+        {
+            cifmin=cifMinNumar(v[i]);
+        }
+    }
+    return cifmin;
+}
 int cifMaxNumar(int n)
 {
     int maxi=-1;
@@ -191,5 +217,21 @@ int frecventaMinimului(int v[], int pmin, int pmax, int mn)
     }
     return nr;
 }
+
+bool inCif(int n , int c)
+{
+    int ok=0;
+    while(n!=0)
+    {
+        int uc=n%10;
+        if(uc==c)
+        {
+            ok=1;
+        }
+         n=n/10;
+    }
+    return ok;
+}
+
 
 #endif // FUNCTII_H_INCLUDED
