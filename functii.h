@@ -3,14 +3,29 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
+const int NMAX = 300;
 
 void citireVector(int v[], int&dim)
 {
+    dim=0;
     ifstream read("data.txt");
+    if(!read)
+    {
+        cout<<"Nu am putut deschide data.txt"<<endl;
+        return;
+    }
     read>>dim;
+    if(dim>NMAX)
+    {
+        dim=NMAX;
+    }
     for(int i=0; i<dim; i++)
     {
-        read>>v[i];
+        if(!(read>>v[i]))
+        {
+            dim=i;
+            return;
+        }
     }
 }
 
