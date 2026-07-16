@@ -261,4 +261,23 @@ int permutareMax(int n )
         }
   return numar;
 }
+
+
+int rescriereNr(int n)
+{
+    int cifmin=cifMinNumar(n);
+    int cifmax=cifMaxNumar(n);
+    int p=1,nr=0;
+    while(n!=0)
+    {
+        int uc=n%10;
+        if(uc==cifmin)
+
+            uc=cifmax;
+        nr=nr+uc*p;
+        p=p*10;
+        n=n/10;
+    }
+    return nr;
+}
 #endif // FUNCTII_H_INCLUDED

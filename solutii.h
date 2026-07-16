@@ -89,26 +89,26 @@ void solutie5()
     {
         int pmax=permutareMax(v[i]);
         int ok=1;
-        for(int j=0; j<i;j++)
+        for(int j=0; j<i; j++)
         {
             if(pmax>=v[j])
             {
                 ok=0;
             }
         }
-        for(int j=i+1; j<n;j++)
+        for(int j=i+1; j<n; j++)
         {
             if(pmax>=v[j])
             {
                 ok=0;
             }
         }
-            if(ok==1)
-            {
-                cout<< " Primul minim absolut este " <<v[i];
-                gasit=1;
-            }
+        if(ok==1)
+        {
+            cout<< " Primul minim absolut este " <<v[i];
+            gasit=1;
         }
+    }
     if(gasit==0)
     {
         cout<<" Nu exista ";
@@ -116,4 +116,41 @@ void solutie5()
     }
 
 }
+
+void solutie6()
+{
+    int v[300], n;
+    citireVector(v,n);
+
+    int mn=valMin(v,n);
+    int mx=valMax(v,n);
+    for(int i =0; i<n ;i++)
+    {
+        if(v[i]==mn)
+        {
+            v[i]=mx;
+        }
+        else
+        {
+            if(v[i]==mx)
+            {
+                v[i]=mn;
+            }
+        }
+
+    }
+    afisareVector(v,n);
+}
+
+void solutie7()
+{
+    int v[300],n;
+    citireVector(v,n);
+    for(int i=0; i<n; i++)
+    {
+        v[i]=rescriereNr(v[i]);
+    }
+    afisareVector(v,n);
+}
+
 #endif // SOLUTII_H_INCLUDED
