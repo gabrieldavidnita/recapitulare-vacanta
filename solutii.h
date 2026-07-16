@@ -79,4 +79,41 @@ void solutie4()
         cout<<"Nu toate elementele contin cifra minima sau maxima";
     }
 }
+
+void solutie5()
+{
+    int v[300],n;
+    citireVector(v,n);
+    int gasit=0;
+    for(int i=0; i<n && gasit==0; i++)
+    {
+        int pmax=permutareMax(v[i]);
+        int ok=1;
+        for(int j=0; j<i;j++)
+        {
+            if(pmax>=v[j])
+            {
+                ok=0;
+            }
+        }
+        for(int j=i+1; j<n;j++)
+        {
+            if(pmax>=v[j])
+            {
+                ok=0;
+            }
+        }
+            if(ok==1)
+            {
+                cout<< " Primul minim absolut este " <<v[i];
+                gasit=1;
+            }
+        }
+    if(gasit==0)
+    {
+        cout<<" Nu exista ";
+
+    }
+
+}
 #endif // SOLUTII_H_INCLUDED

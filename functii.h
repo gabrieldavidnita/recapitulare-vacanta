@@ -233,5 +233,32 @@ bool inCif(int n , int c)
     return ok;
 }
 
-
+int permutareMax(int n )
+{
+    int c[100], nr=0;
+    while(n!=0)
+    {
+        c[nr]=n%10;
+        nr++;
+        n=n/10;
+    }
+    for(int i =0; i<nr-1; i++)
+    {
+        for(int j=i+1; j<nr; j++)
+        {
+            if(c[i]<c[j])
+            {
+                int aux=c[i];
+                c[i]=c[j];
+                c[j]=aux;
+            }
+        }
+    }
+     int numar=0;
+        for(int i=0; i<nr; i++)
+        {
+            numar=numar*10+c[i];
+        }
+  return numar;
+}
 #endif // FUNCTII_H_INCLUDED

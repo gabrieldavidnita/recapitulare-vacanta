@@ -3,6 +3,6 @@
 int main()
 {
 
-solutie4();
+solutie5();
 
 }
