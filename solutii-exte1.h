@@ -52,4 +52,13 @@ void solutie6a()
     int n=7;
     cout<<elementMajoritar(v,n);
 }
+
+void solutie7a()
+{
+    int v[100]={1,2,3,4,5,6,7};
+    int n=7;
+    int k=3;
+    rotesteDreapta(v,n,k);
+    afisareVector(v,n);
+}
 #endif // SOLUTII-EXTE1_H_INCLUDED

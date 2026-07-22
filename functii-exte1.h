@@ -102,7 +102,10 @@ int stergereDubluri(int v[], int n )
     return k;
 
 }
-
+//1 2 3 4 5 6 7
+// 7 6 5 4 3 2 1
+// 5 6 7 4 3 2 1
+// 5674123
 
 //6
 
@@ -124,5 +127,31 @@ int elementMajoritar(int v[], int n )
         }
     }
     return -1;
+}
+
+
+
+//ex 7
+void inversare(int v[], int st, int dr)
+{
+    while(st<dr)
+    {
+        int aux=v[st];
+        v[st]=v[dr];
+        v[dr]=aux;
+
+        st++;
+        dr--;
+    }
+}
+
+
+
+void rotesteDreapta(int v[],int n , int k )
+{
+    k=k%n;
+    inversare(v,0,n-1);
+    inversare(v,0,k-1);
+    inversare(v,k,n-1);
 }
 #endif // FUNCTII-EXTE1_H_INCLUDED
