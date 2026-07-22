@@ -66,4 +66,24 @@ void mutaZerouri(int v[],int n)
         p++;
     }
 }
+
+//4
+int maxUnuConsecutiv(int v[],int n)
+{
+    int nr=0;
+    int maxi=0;
+    for(int i=0;i<n;i++)
+    {
+        if(v[i]==1)
+        {
+            nr++;
+            if(nr>maxi)
+            {
+                 maxi=nr;
+            }
+        }else
+            nr=0;
+    }
+    return maxi;
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED

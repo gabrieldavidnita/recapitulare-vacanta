@@ -29,4 +29,11 @@ void solutie3a()
     afisareVector(v,n);
 }
 
+void solutie4a()
+{
+    int v[1000]={1,1,0,1,1,1};
+    int n=6;
+    cout<<maxUnuConsecutiv(v,n);
+
+}
 #endif // SOLUTII-EXTE1_H_INCLUDED
