@@ -1,9 +1,9 @@
 
-#include "solutii.h"
+
+#include "solutii-exte1.h"
 int main()
 {
 
-solutie7();
 
-
+   solutie2a();
 }
