@@ -45,4 +45,11 @@ void solutie5a()
     cout<<k<<endl;
     afisareVector(v,n);
 }
+
+void solutie6a()
+{
+    int v[100]={2,2,1,1,1,2,2};
+    int n=7;
+    cout<<elementMajoritar(v,n);
+}
 #endif // SOLUTII-EXTE1_H_INCLUDED

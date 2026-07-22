@@ -5,5 +5,5 @@ int main()
 {
 
 
-   solutie5a();
+   solutie6a();
 }

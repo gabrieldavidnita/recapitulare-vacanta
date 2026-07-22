@@ -102,4 +102,27 @@ int stergereDubluri(int v[], int n )
     return k;
 
 }
+
+
+//6
+
+int elementMajoritar(int v[], int n )
+{
+    for(int i=0; i<n; i++)
+    {
+        int nr=0;
+        for(int j=0;j<n; j++)
+        {
+            if(v[i]==v[j])
+            {
+                nr++;
+            }
+        }
+        if(nr>n/2)
+        {
+            return v[i];
+        }
+    }
+    return -1;
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED
