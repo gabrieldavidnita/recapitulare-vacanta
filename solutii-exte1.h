@@ -61,4 +61,17 @@ void solutie7a()
     rotesteDreapta(v,n,k);
     afisareVector(v,n);
 }
+
+void solutie8a()
+{
+    int v[100]={1,2,3,4,5};
+    int q=5;
+    long long p[1000];
+    construiestePrefix(v,q,p);
+    for(int i =0; i<=q;i++)
+    {
+        int st,dr;
+        cout<<sumaInterval(p,st,dr)<<endl;
+    }
+}
 #endif // SOLUTII-EXTE1_H_INCLUDED

@@ -154,4 +154,19 @@ void rotesteDreapta(int v[],int n , int k )
     inversare(v,0,k-1);
     inversare(v,k,n-1);
 }
+
+//8
+void construiestePrefix(int v[],int n, long long p[])
+{
+    p[0]=0;
+    for(int i =0;i<n;i++)
+    {
+        p[i+1]=p[i]+v[i];
+    }
+}
+
+long long sumaInterval(long long p[],int st, int dr)
+{
+    return p[dr+1]-p[st];
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED
