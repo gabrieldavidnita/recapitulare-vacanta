@@ -36,4 +36,13 @@ void solutie4a()
     cout<<maxUnuConsecutiv(v,n);
 
 }
+
+void solutie5a()
+{
+    int v[100]={1,1,2,2,3,3,3,5,5,7,7};
+    int n=10;
+    int k=stergereDubluri(v,n);
+    cout<<k<<endl;
+    afisareVector(v,n);
+}
 #endif // SOLUTII-EXTE1_H_INCLUDED

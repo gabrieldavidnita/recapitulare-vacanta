@@ -86,4 +86,20 @@ int maxUnuConsecutiv(int v[],int n)
     }
     return maxi;
 }
+
+//5
+int stergereDubluri(int v[], int n )
+{
+    int k=1;
+    for(int i=1; i<n; i++)
+    {
+        if(v[i]!=v[k-1])
+        {
+            v[k]=v[i];
+            k++;
+        }
+    }
+    return k;
+
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED
