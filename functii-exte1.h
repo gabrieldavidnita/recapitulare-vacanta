@@ -4,6 +4,15 @@
 #include <iostream>
 using namespace std;
 //problema 1
+void afisareVector(int v[], int dim)
+
+{
+    for(int i=0; i<dim ; i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+}
 
 void perecheSuma(int v[],int n,int S,int &pi,int &pj)
 {
@@ -41,4 +50,20 @@ int profitMaxim(int v[],int n)
     return profit;
 }
 
+//3
+void mutaZerouri(int v[],int n)
+{
+    int p=0;
+    for(int i=0;i<n;i++)
+        if(v[i]!=0)
+        {
+            v[p]=v[i];
+            p++;
+        }
+    while(p<n)
+    {
+        v[p]=0;
+        p++;
+    }
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED

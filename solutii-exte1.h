@@ -21,6 +21,12 @@ void solutie2a()
     cout<<profitMaxim(v,n);
 }
 
-
+void solutie3a()
+{
+    int v[100]={0,1,0,3,12};
+    int n=5;
+    mutaZerouri(v,n);
+    afisareVector(v,n);
+}
 
 #endif // SOLUTII-EXTE1_H_INCLUDED
