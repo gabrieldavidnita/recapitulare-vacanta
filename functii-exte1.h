@@ -206,4 +206,75 @@ void produsFaraSine(int v[],int n , long long rez[])
         sufix=sufix*v[i];
     }
 }
+
+void maximDreapta(int v[], int n , int dr[])
+{
+    dr[n-1]=v[n-1];
+    for(int i=n-2; i>=0; i--)
+    {
+        if(v[i]>dr[i+1])
+        {
+            dr[i]=v[i];
+        }
+        else
+        {
+            dr[i]=dr[i+1];
+        }
+    }
+}
+
+
+void maximStanga(int v[], int n , int st[])
+{
+    st[0]=v[0];
+    for(int i=1; i<n; i++)
+    {
+        if(v[i]>st[i-1])
+        {
+            st[i]=v[i];
+        }
+        else
+        {
+            st[i]=st[i-1];
+        }
+    }
+}
+
+
+int apaAdunata(int v[],int n)
+{
+
+    int maxStanga[100],maxDreapta[100];
+    maxStanga[0]=v[0];
+    for(int i=1;i<n;i++){
+        maxStanga[i]=maxStanga[i-1];
+        if(v[i]>maxStanga[i]){
+            maxStanga[i]=v[i];
+        }
+    }
+
+    maxDreapta[n-1]=v[n-1];
+    for(int i=n-2;i>=0;i--)
+    {
+         maxDreapta[i]=maxDreapta[i+1];
+        if(v[i]>maxDreapta[i+1])
+        {
+            maxDreapta[i]=v[i];
+        }
+
+    }
+
+    int apa=0;
+    for(int i=0; i<n; i++)
+    {
+       int nivel=maxStanga[i];
+       if(maxDreapta[i]<nivel){
+           nivel=maxDreapta[i];
+       }
+       apa=apa+nivel-v[i];
+    }
+
+    return apa;
+
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED
