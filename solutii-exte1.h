@@ -64,14 +64,16 @@ void solutie7a()
 
 void solutie8a()
 {
-    int v[100]={1,2,3,4,5};
-    int q=5;
-    long long p[1000];
-    construiestePrefix(v,q,p);
-    for(int i =0; i<=q;i++)
+    int v[1000]={1,2,3,4,5};
+    int n=5;
+    int q=3;
+    int st[10]={0 ,1,0};
+    int dr[10]={2,3,4};
+    long long p[1001];
+    construiestePrefix(v,n,p);
+    for(int i=0;i<q; i++)
     {
-        int st,dr;
-        cout<<sumaInterval(p,st,dr)<<endl;
+        cout<<sumaInterval(p,st[i],dr[i])<<endl;
     }
 }
 #endif // SOLUTII-EXTE1_H_INCLUDED

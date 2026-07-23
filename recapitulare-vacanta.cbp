@@ -33,10 +33,16 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="data.txt" />
+		<Unit filename="functii-exte1.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="functii.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="solutii-exte1.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="solutii.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
