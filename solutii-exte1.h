@@ -76,4 +76,16 @@ void solutie8a()
         cout<<sumaInterval(p,st[i],dr[i])<<endl;
     }
 }
+
+void solutie9a()
+{
+  int v[100]={1,2,3,4};
+  int n=4;
+  long long rez[100];
+  produsFaraSine(v,n,rez);
+  for(int i =0; i<n; i++)
+  {
+      cout<<rez[i]<<" ";
+  }
+}
 #endif // SOLUTII-EXTE1_H_INCLUDED

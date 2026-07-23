@@ -169,4 +169,41 @@ long long sumaInterval(long long p[],int st, int dr)
 {
     return p[dr+1]-p[st];
 }
+
+
+
+//9
+//0,1,2,3
+//1,2,3,4
+//n=4
+//prefix=1,sufix=1;
+//i i<n  rez[i]=prefix;     prefix=prefix*v[i];   i
+//0 0<4    rez[0]= 1             prefix=1         1
+//1 1<4    rez[1]= 1             prefix=2         2
+//2 2<4    rez[2]= 2             prefix=6         3
+//3 3<4    rez[3]= 6             prefix=24        4
+//4 4<4 F
+
+
+//i=n-1   i>=0      rez[i]=rez[i]*sufix;       sufix=sufix*v[i];     i--
+//i=3     3>=0      rez[3]=6*1=6               sufix=4                2
+//i=2     2>=0      rez[2]=2*4=8               sufix=12               1
+//i=1     1>=0      rez[1]=1*12=12             sufix=24               0
+//i=0     0>=0      rez[0]=24                  sufix=24               -1
+//i=-1    -1>=0 F
+void produsFaraSine(int v[],int n , long long rez[])
+{
+    long long prefix=1;
+    for(int i=0; i<n; i++)
+    {
+        rez[i]=prefix;
+        prefix=prefix*v[i];
+    }
+    long long sufix=1;
+    for(int i=n-1;i>=0;i--)
+    {
+        rez[i]=rez[i]*sufix;
+        sufix=sufix*v[i];
+    }
+}
 #endif // FUNCTII-EXTE1_H_INCLUDED
